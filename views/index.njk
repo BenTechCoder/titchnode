@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spelling Bee</title>
+        <link rel="stylesheet" href="/styles/styles.css"/>
+    </head>
+    <body class="wrapper">
+        <div class="region">
+            <a href="/">
+                <h1>Titch</h1>
+            </a>
+        </div>
+        <form action="/spelling-bee/" method="GET" class="region flow">
+            <label for="letters">Letters:</label>
+            <input type="text" id="letters" name="letters" placeholder="Outside Hex Letters"><br><br>
+            <label for="center">Center:</label>
+            <input type="text" id="center" name="center" placeholder="Inside Hex Letter"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if words %}
+            <ul class="region">
+                {% for word in words %}
+                    <li>{{ word }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <footer>
+            <p>
+        Built with 😁 and 🍵 by
+        <a href="https://lebronconsulting.tech/">Benjamin Lebron</a>
+            </p>
+        </footer>
+    </body>
+</html>
