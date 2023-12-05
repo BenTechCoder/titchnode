@@ -33,8 +33,15 @@ app.get("/", (req, res) => {
 
 /*
 
-TODO: MAKE FUNCTION FOR BOTH WORDLE AND API ROUTES AND CHANGE THEM TO SPELLING BEE
+TODO: add rate-limiting for API route
+TODO: MAKE FUNCTION FOR BOTH WORDLE AND API ROUTES
 TODO: Investigate caching options for the routes and combination of letters, (might be too many combos but we'll see)
+TODO: SEO improvements, favicon, Opengraph image
+TODO: Split njk files into new ones
+TODO: Add auth for API and Spelling Bee Solver
+TODO: Add compression package middleware
+TODO: Add original Titch functionality/vite integration
+TODO: add domain to benjaminlebron.com and to benjaminlebron.com projects
 
 */
 
@@ -47,7 +54,6 @@ app.get("/spelling-bee",  (req, res) => {
 });
 
 /* 
-TODO: add auth/rate-limiting for API route
 app.get("/api/spelling-bee",  (req, res) => {
   const reqLetters = Array.from(req.query.letters);
   const reqCenterLetter = req.query.center;
