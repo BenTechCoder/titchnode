@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Titch a helper app for solving Spelling Bee game and more. Made by Lebron Consulting">
-        <title>Titch - A helper app</title>
-        <link rel="stylesheet" href="/styles/styles.css"/>
-    </head>
-    <body class="wrapper">
-        <div class="region">
-            <a href="/">
-                <h1>Titch</h1>
-            </a>
-        </div>
-       <div class="flow">
-            <form action="/spelling-bee/" method="GET" class="flow">
-                <label for="letters">Letters:</label>
-                <input type="text" id="letters" name="letters" placeholder="Outside Hex Letters"><br><br>
-                <label for="center">Center:</label>
-                <input type="text" id="center" name="center" placeholder="Inside Hex Letter"><br><br>
-                <input type="submit" value="Submit">
-            </form>
-    
-            {% if words %}
-                <ul>
-                    {% for word in words %}
-                        <li>{{ word }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-    
-       </div>
-        <footer class="region">
-            <p>
-        Built with 😁 and 🍵 by
-        <a href="https://www.lebronconsulting.tech/">Benjamin Lebron</a>
-            </p>
-        </footer>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Titch a helper app for solving Spelling Bee game and more. Made by Lebron Consulting">
+    <title>Titch - A helper app</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body class="wrapper flow">
+    <div class="region">
+        <a href="/">
+            <h1>Titch</h1>
+        </a>
+    </div>
+    <div class="flow">
+        <form action="/spelling-bee/" method="GET" class="flow">
+            <label for="letters">Letters:</label>
+            <input type="text" id="letters" name="letters" placeholder="Outside Hex Letters"><br><br>
+            <label for="center">Center:</label>
+            <input type="text" id="center" name="center" placeholder="Inside Hex Letter"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if words %}
+        <ul>
+            {% for word in words %}
+            <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    {% include 'components/video-player.njk' %}
+
+    <footer class="region">
+        <p>
+            Built with 😁 and 🍵 by
+            <a href="https://www.lebronconsulting.tech/">Benjamin Lebron</a>
+        </p>
+    </footer>
+</body>
+<script type="module" src="/scripts/index.js"></script>
 </html>
