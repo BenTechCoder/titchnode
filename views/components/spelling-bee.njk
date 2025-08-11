@@ -1,0 +1,17 @@
+<div class="flow">
+        <form action="/spelling-bee/" method="GET" class="flow">
+            <label for="letters">Letters:</label>
+            <input type="text" id="letters" name="letters" placeholder="Outside Hex Letters"><br><br>
+            <label for="center">Center:</label>
+            <input type="text" id="center" name="center" placeholder="Inside Hex Letter"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if words %}
+        <ul>
+            {% for word in words %}
+            <li>{{ word }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
